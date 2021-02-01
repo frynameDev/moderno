@@ -105,6 +105,7 @@
    }
 }
 .basket {
+   margin-right: 20px;
    span {
       background-color: #95c85a;
    }
@@ -120,7 +121,6 @@
 }
 
 .user {
-   margin-left: 20px;
    margin-right: 25px;
    padding-right: 20px;
    position: relative;
@@ -158,9 +158,9 @@
 }
 // dropdown
 .user__menu {
-   border: 0px solid rgb(204, 204, 204);
+   border: 0px solid #ccc;
    position: absolute;
-   top: 70px;
+   top: 69px;
    left: 20px;
    background-color: #fff;
    padding: 0px 20px;
@@ -173,6 +173,11 @@
       color: $text;
       margin-bottom: 15px;
    }
+}
+.circle__menu {
+   position: absolute;
+   top: 69px;
+   z-index: 1;
 }
 .user__box,
 .basket__box,
@@ -191,10 +196,9 @@
    }
 }
 .circle__menu {
-   border-top: 0px solid #d5d5d5;
-   position: absolute;
+   border-top: 1px solid #d5d5d5;
    top: 62px;
-   right: -20px;
+   right: 0;
    height: 0;
    transition: all 0.3s;
    overflow: hidden;
@@ -211,8 +215,7 @@
       .circle__menu {
          overflow: hidden;
          height: auto;
-         z-index: 1;
-         border-width: 1px;
+         z-index: 2;
       }
       .circle__item {
          padding: 23px;
@@ -220,16 +223,12 @@
       }
    }
 }
-// .message__box,
-// .notification__box {
-//    .circle__menu {
-//       right: 0;
-//    }
-// }
 
 .circle__item {
    background-color: #fff;
-   border: 0px solid #d5d5d5;
+   border: 1px solid #d5d5d5;
+   border-left-width: 1px;
+   border-right-width: 1px;
    border-top: none;
    padding: 0px 23px;
    transition: all 0.3s;
@@ -327,6 +326,11 @@
 }
 .icons-color::before {
    color: $tomato;
+}
+
+.header__bnt-menu,
+.menu__btn {
+   display: none;
 }
 
 //end header
@@ -841,3 +845,5 @@
    padding: 20px 0px 30px;
 }
 // end footer
+
+@import "media";
