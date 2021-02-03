@@ -49,6 +49,10 @@ body {
 }
 // =======================================
 
+.page-content {
+   background-color: $gray;
+}
+
 .container {
    max-width: 1200px;
    margin: 0 auto;
@@ -76,6 +80,32 @@ body {
    display: inline-block;
    margin-right: 15px;
 }
+
+//хлебные крошки
+.breadcrumbs {
+   &__inner {
+      padding: 45px 0px 40px;
+   }
+   &__list {
+      li {
+         display: inline-block;
+         position: relative;
+         & + li {
+            padding-left: 24px;
+            &::before {
+               content: "-";
+               position: absolute;
+               left: 8px;
+               color: $green;
+            }
+         }
+      }
+      a {
+         color: #b0bec5;
+      }
+   }
+}
+
 .angle-right {
    position: relative;
    padding-left: 15px;
