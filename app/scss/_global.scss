@@ -90,6 +90,7 @@ body {
       li {
          display: inline-block;
          position: relative;
+         color: $bg;
          & + li {
             padding-left: 24px;
             &::before {

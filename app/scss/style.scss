@@ -443,6 +443,19 @@
    background-position: center;
    min-height: 530px;
 }
+
+// узкая полоса поиска для других страниц
+.page-search {
+   min-height: 228px;
+}
+.page-search .search__inner {
+   padding: 55px 0px 65px;
+}
+.page-search .search__inner-text {
+   margin-bottom: 25px;
+}
+//
+
 .search__inner {
    padding: 155px 0px 100px;
    color: #fff;
@@ -1294,5 +1307,95 @@
 //end asade sidebar
 
 // End product-one
+
+// start page 404
+.page-404__wrapper,
+.about__wrapper {
+   border: 1px solid #dcdcdc;
+   background-color: #fff;
+   margin-bottom: 150px;
+}
+.page-404__head,
+.about__head {
+   font-size: 24px;
+   @include f500;
+   color: #444444;
+   border-bottom: 1px solid #dcdcdc;
+   padding: 23px 27px;
+}
+.page-404__inner {
+   text-align: center;
+   background-color: $green;
+   color: #fff;
+}
+.page-404__404 {
+   font-family: "Open Sans", sans-serif;
+   font-weight: 800;
+   font-size: 300px;
+   line-height: 300px;
+   padding-top: 70px;
+   padding-bottom: 20px;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../images/page-404.png);
+      width: 150px;
+      height: 292px;
+      margin-left: 20px;
+   }
+   // тень под чуваком
+   &::before {
+      content: "";
+      background-image: url(../images/shadow-404.png);
+      width: 157px;
+      height: 20px;
+      position: absolute;
+      right: 146px;
+      bottom: 18px;
+   }
+   //
+}
+.page-404__title {
+   margin-bottom: 30px;
+   font-size: 30px;
+   @include f300;
+   letter-spacing: 6px;
+}
+.page-404__text {
+   font-size: 18px;
+   max-width: 530px;
+   margin: 0 auto;
+   margin-bottom: 60px;
+}
+.page-404__link {
+   font-size: 14px;
+   color: #fff;
+   text-transform: uppercase;
+   padding: 15px 38px 16px;
+   border: 1px solid #fff;
+   border-radius: 4px;
+   margin-bottom: 100px;
+}
+// end page 404
+
+//start about us
+.about__inner {
+   padding: 0px 50px;
+}
+.about__box {
+   h3 {
+      font-size: 20px;
+      @include f700;
+      color: #444;
+      margin-top: 40px;
+      margin-bottom: 15px;
+   }
+   p {
+      margin-bottom: 40px;
+      color: #707070;
+   }
+}
+//end about us
 
 @import "media";
